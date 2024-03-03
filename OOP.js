@@ -24,16 +24,27 @@
 // // myCar.stop();
 
 class Employee {
-    name;
+    name = 'alex';
     age;
     salary;
 
-    fullName (name, surn) {
+    constructor(name, salary) {
+        console.log(name + ' ' + salary)
+    }
+
+    fullName(name, surn) {
         return `${this.name} ${this.surn}`;
+    }
+
+    showName() {
+         return this.name
+    }
+    showSalary() {
+         return this.salary
     }
 }
 
-let newGuy = new Employee();
+let newGuy = new Employee('alex', '100000$');
 let newGuy2 = new Employee();
 let newGuy3 = new Employee();
 let newGuy4 = new Employee();
@@ -59,4 +70,24 @@ newGuy4.age = 24;
 newGuy4.salary = 5000;
 
 
-console.log(newGuy.fullName())
+console.log(newGuy.showName(), newGuy.showSalary())
+
+
+// class Student {
+//     name = 'chel';
+//     surn = 'newChel';
+//     constructor() {
+//         console.log('+++')
+//     }
+//     getInitials(){
+//         let n = this.name[0].toUpperCase()
+//         let s = this.surn[0].toUpperCase()
+//         return n + s
+//     }
+// }
+//
+// let student = new Student();
+// student.name = 'ark';
+// student.surn = 'bark'
+
+// console.log(student.getInitials())
